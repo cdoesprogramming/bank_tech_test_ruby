@@ -13,4 +13,12 @@ describe Statement do
       expect(statement.balance()).to eq 50
     end
   end
+  describe '#withdraw' do
+    it "lets you withdraw money from your account" do
+      statement = Statement.new
+      statement.deposit(50)
+      statement.withdraw(20)
+      expect(statement.balance()).to eq 30
+    end
+  end
 end
