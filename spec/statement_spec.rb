@@ -1,4 +1,7 @@
 require_relative '../lib/statement'
+require_relative '../lib/print'
+
+
 describe Statement do
     it " allows you to check your balance" do
       statement = Statement.new

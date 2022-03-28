@@ -1,3 +1,4 @@
+require_relative '../lib/print'
 
 class Statement
 
