@@ -18,6 +18,7 @@ describe Statement do
       statement = Statement.new
       statement.deposit(50)
       expect(statement.balance()).to eq 50
+      expect(statement.date()).to eq Time.new.strftime("%m/%d/%Y")
     end
   end
   describe '#withdraw' do
@@ -26,6 +27,7 @@ describe Statement do
       statement.deposit(50)
       statement.withdraw(20)
       expect(statement.balance()).to eq 30
+      expect(statement.date()).to eq Time.new.strftime("%m/%d/%Y")
     end
   end
 end

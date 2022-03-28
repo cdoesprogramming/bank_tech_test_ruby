@@ -15,6 +15,7 @@ class Statement
 
   def withdraw(amount)
     @balance -= amount
+    puts  "#{@date} #{@balance} "
   end
 
   # def date(date)
