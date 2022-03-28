@@ -5,7 +5,7 @@ class Statement
   def initialize
     @balance = 0
     # @deposit = 0
-    @date = Time.new.strftime("14/01/2023")
+    @date = Time.now.strftime("%m/%d/%Y")
   end
 
   def deposit(amount)
@@ -16,6 +16,10 @@ class Statement
   def withdraw(amount)
     @balance -= amount
   end
+
+  # def date(date)
+  #   p @date = Time.new.strftime("")
+  # end
 
 
 

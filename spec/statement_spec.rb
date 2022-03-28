@@ -10,7 +10,7 @@ describe Statement do
     statement.balance
     statement.deposit(50)
     expect(statement.balance()).to eq 50
-    expect(statement.date()).to eq Time.new.strftime("14/01/2023")
+    expect(statement.date()).to eq Time.new.strftime("%m/%d/%Y")
   end
 
   describe '#deposit' do
