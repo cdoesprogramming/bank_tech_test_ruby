@@ -7,22 +7,22 @@ class Statement
   def initialize
     @balance = 0.00
     # @deposit = 0
-    @date = Time.now.strftime("%m/%d/%Y")
+    @date = Time.now.strftime("%d/%m/%Y")
   end
 
   def deposit(amount)
     @balance += amount
-    puts "#{@date} #{@balance}"
+    # puts "#{@date} #{@balance}"
   end
 
   def withdraw(amount)
     @balance -= amount
-    puts  "#{@date} #{@balance} "
+    # puts  "#{@date} #{@balance} "
   end
 
   def credit(amount)
     @balance += amount
-    puts "#{date} #{@balance}"
+    # puts "#{date} #{@balance}"
   end
 
 end

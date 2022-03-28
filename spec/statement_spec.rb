@@ -13,7 +13,7 @@ describe Statement do
     statement.balance
     statement.deposit(50.00)
     expect(statement.balance()).to eq 50.00
-    expect(statement.date()).to eq Time.new.strftime("%m/%d/%Y")
+    expect(statement.date()).to eq Time.new.strftime("%d/%m/%Y")
   end
   it "increases your balance by a particular amount" do
     statement = Statement.new
@@ -26,7 +26,7 @@ describe Statement do
       statement = Statement.new
       statement.deposit(50.00)
       expect(statement.balance()).to eq 50.00
-      expect(statement.date()).to eq Time.new.strftime("%m/%d/%Y")
+      expect(statement.date()).to eq Time.new.strftime("%d/%m/%Y")
     end
   end
   describe '#withdraw' do
@@ -35,7 +35,7 @@ describe Statement do
       statement.deposit(50.00)
       statement.withdraw(20.00)
       expect(statement.balance()).to eq 30.00
-      expect(statement.date()).to eq Time.new.strftime("%m/%d/%Y")
+      expect(statement.date()).to eq Time.new.strftime("%d/%m/%Y")
     end
   end
 end
