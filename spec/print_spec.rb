@@ -6,11 +6,12 @@ describe Print do
       bank_statement = Print.new
       expect(bank_statement.print_header).to include("date || credit || debit || balance")
     end
-    it "prints the statement in the correct format" do
-      bank_statement = Print.new
-     
-      expect(bank_statement.print_format).to eq ("|| || ||")
-    end
+      # let(:statement) { double(:statement)}
+    # it "prints the statement in the correct format" do
+    #   bank_statement = Print.new
+    #   # statement = Statement.new
+    #   expect(bank_statement.print_format).to eq ("29/04/2022|| || 500.00|| 2500.00")
+    # end
   end
   # let(:statement.deposit) { double(:statement.deposit)}
   # it "prints a statement with a transaction in the correct format" do

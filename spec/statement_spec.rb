@@ -48,4 +48,11 @@ describe Statement do
   #     expect(statement.transaction).to eq ([Time.new.strftime("%d/%m/%Y"),100.00, 100.00])
   #   end
   # end
+  it "prints the statement in the correct format" do
+      statement = Statement.new
+      statement.deposit(1000.00)
+      statement.deposit(2000.00)
+      statement.withdraw(500.00)
+      expect(statement.print_format).to eq ("29/03/2022 || || 500.0 || 2500.0")
+    end
 end
