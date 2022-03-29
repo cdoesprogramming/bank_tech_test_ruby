@@ -17,9 +17,9 @@ class Statement
   def deposit(amount)
     @balance += amount
     @transaction_amount = amount
-    puts @transaction_amount
+    @transaction_amount
     @transaction = [date, transaction_amount, balance]
-    p @bank_statement << transaction
+    @bank_statement << transaction
     # @transaction << date
     # puts "#{@date} #{@balance}"
   end
@@ -27,9 +27,9 @@ class Statement
   def withdraw(amount)
     @balance -= amount
     @transaction_amount = amount
-    puts @transaction_amount
+    @transaction_amount
     @transaction = [date, transaction_amount, balance]
-    p @bank_statement << transaction
+    @bank_statement << transaction
     # @transaction << date
     # puts  "#{@date} #{@balance} "
   end
@@ -39,7 +39,7 @@ class Statement
     @transaction_amount = amount
     # puts @transaction_amount
     @transaction = [date, transaction_amount, balance]
-    p @bank_statement << transaction
+     @bank_statement << transaction.join("\n")
     # @transaction << balance
     # @transaction << date
     # puts "#{date} #{@balance}"
@@ -55,12 +55,17 @@ class Statement
   # end
 
   def print_format()
-    p @transaction = [date, transaction_amount, balance]
-    # p @bank_statement << @transaction
-    p @bank_statement << "#{@date} || || #{@transaction_amount} || #{@balance}"
+    # p @transaction = [date, transaction_amount, balance]
+    # p @bank_statement << @transaction.join(" || ")
+    
+  #  @bank_statement.join("\n") 
+  #   @bank_statement.join(" || ")
+    bank_statement.reverse.each_slice(1).with_index do |part, ind|
+      puts part.join(" || ") + (ind == 3 ? "" : " ")
+    end
     # return transaction
-    return bank_statement
-   p bank_statement.join(" || ")
+    # return bank_statement
+  #  p bank_statement.join(" || ")
     # date = @statement.date
     # transaction_amount = @statement.transaction_amount
     # balance = @statement.balance
