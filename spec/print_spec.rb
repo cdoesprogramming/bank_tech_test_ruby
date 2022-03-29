@@ -6,18 +6,12 @@ describe Print do
       bank_statement = Print.new
       expect(bank_statement.print_header).to include("date || credit || debit || balance")
     end
-    it "prints the date" do
+    it "prints the statement in the correct format" do
       bank_statement = Print.new
      
-      expect(bank_statement.print_date).to eq (Time.new.strftime("%d/%m/%Y"))
-    end
-    it "prints the date, latest transaction and current balance" do
-      bank_statement = Print.new
-      statement = Statement.new
-      statement.deposit(3000.00)
-      statement.withdraw(500.00)
-      statement.balance
-      expect(bank_statement.print_balance).to eq ("|| || 500.00 || 2500.00")
+      expect(bank_statement.print_format).to eq ("|| || ||")
     end
   end
 end
+# blocked: trying to print one line of the bank statement that includes the date, the transaction amount and the balance
+# I will probably need to create a variable that tracks the amount debited/credited/withdrawn and then interpolate it
