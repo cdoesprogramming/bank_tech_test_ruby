@@ -19,6 +19,7 @@ class Statement
     @transaction_amount = amount
     puts @transaction_amount
     @transaction = [date, transaction_amount, balance]
+    p @bank_statement << transaction
     # @transaction << date
     # puts "#{@date} #{@balance}"
   end
@@ -28,6 +29,7 @@ class Statement
     @transaction_amount = amount
     puts @transaction_amount
     @transaction = [date, transaction_amount, balance]
+    p @bank_statement << transaction
     # @transaction << date
     # puts  "#{@date} #{@balance} "
   end
@@ -37,6 +39,7 @@ class Statement
     @transaction_amount = amount
     # puts @transaction_amount
     @transaction = [date, transaction_amount, balance]
+    p @bank_statement << transaction
     # @transaction << balance
     # @transaction << date
     # puts "#{date} #{@balance}"
@@ -55,8 +58,9 @@ class Statement
     p @transaction = [date, transaction_amount, balance]
     # p @bank_statement << @transaction
     p @bank_statement << "#{@date} || || #{@transaction_amount} || #{@balance}"
-    return "#{@date} || || #{@transaction_amount} || #{@balance}"
-  #  p @transaction.join(" || ")
+    # return transaction
+    return bank_statement
+   p bank_statement.join(" || ")
     # date = @statement.date
     # transaction_amount = @statement.transaction_amount
     # balance = @statement.balance

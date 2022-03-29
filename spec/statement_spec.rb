@@ -53,6 +53,6 @@ describe Statement do
       statement.deposit(1000.00)
       statement.deposit(2000.00)
       statement.withdraw(500.00)
-      expect(statement.print_format).to eq ("29/03/2022 || || 500.0 || 2500.0")
+      expect(statement.bank_statement).to eq ([["29/03/2022", 1000.0, 1000.0], ["29/03/2022", 2000.0, 3000.0], ["29/03/2022", 500.0, 2500.0]])
     end
 end
