@@ -19,6 +19,7 @@ describe Statement do
     statement = Statement.new
     statement.credit(10.00)
     expect(statement.balance()).to eq 10.00
+    expect(statement.transaction).to eq ([Time.new.strftime("%d/%m/%Y"),10.00, 10.00])
   end
 
   describe '#deposit' do
@@ -26,7 +27,8 @@ describe Statement do
       statement = Statement.new
       statement.deposit(50.00)
       expect(statement.balance()).to eq 50.00
-      expect(statement.date()).to eq Time.new.strftime("%d/%m/%Y")
+      expect(statement.transaction).to eq ([Time.new.strftime("%d/%m/%Y"),50.00, 50.00])
+
     end
   end
   describe '#withdraw' do
@@ -36,6 +38,14 @@ describe Statement do
       statement.withdraw(20.00)
       expect(statement.balance()).to eq 30.00
       expect(statement.date()).to eq Time.new.strftime("%d/%m/%Y")
+      expect(statement.transaction).to eq ([Time.new.strftime("%d/%m/%Y"),20.00, 30.00])
     end
   end
+  # describe '#transaction_history' do
+  #   it "tracks the date, transaction amount and current balance" do
+  #     statement = Statement.new
+  #     statement.deposit(100.00)
+  #     expect(statement.transaction).to eq ([Time.new.strftime("%d/%m/%Y"),100.00, 100.00])
+  #   end
+  # end
 end
