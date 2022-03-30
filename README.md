@@ -4,8 +4,8 @@
 
 My task for this project was to create a program that can be used through a REPL like IRB and simulate the printing of a bank statement. 
 The program needed to have the following requirements:
-- accept deposits and withdrawals
-- Account statement printing including the date, amount and balance
+- Accept deposits and withdrawals,
+- Account statement printing including the date, amount and balance, and
 - Data that can be kept in memory
 
 ## User Stories
