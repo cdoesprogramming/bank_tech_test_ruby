@@ -56,12 +56,12 @@ class Statement
   end
 
   def load_statements(filename = "bank_statement.csv")
+    puts print_header
     file = File.open(filename, "r") do |file|
       file.readlines.each do |line|
         @bank_statement.reverse.each_slice(1).with_index do |part, ind|
           puts part.join(" || ") + (ind == 3 ? "" : " ")
         end
-        @transaction = [date, transaction_amount, balance]
       end
     end
   end

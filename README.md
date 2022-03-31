@@ -10,33 +10,39 @@ The program needed to have the following requirements:
 
 ## User Stories
 ```
-As a bank customer
-So that I can check how much money is in my account
-I would like to check my balance
+As a bank customer,
+So that I can check how much money is in my account,
+I would like to check my balance.
 ```
 
 ```
 As a bank customer,
 So that I can add money to my account,
-I would like to be able to make a deposit
+I would like to be able to make a deposit.
 ```
 
 ```
 As a bank customer,
 So that I can take out my money,
-I would like to be able to withdraw funds
+I would like to be able to withdraw funds.
 ```
 
 ```
 As a bank customer,
 So that I can see activity in my account,
-I would like to see my transaction history
+I would like to see my transaction history.
 ```
 
 ```
 As a bank customer,
 So that I can monitor my account,
-I would like a printed statement of my transactions
+I would like a printed statement of my transactions.
+```
+
+```
+As a bank customer,
+So that I can look at my past transactions,
+I would like to see all previous transactions.
 ```
 
 ## Setting up the project
@@ -59,11 +65,15 @@ I would like a printed statement of my transactions
 `march.transaction`
 - Check all of your transactions with:
 `march.bank_statement`
-- And finally, print your latest bank statement with:
+- Print your latest bank statement with:
 `march.print_format`
+- Save your bank statement with:
+`march.save_statements`
+- And finally, see all previous transactions as a single bank statement with:
+`march.load_statements`
 
 
 ## Expected output
 After following the instructions above and interacting with the program you can expect an output like the following. 
 
-![Output](https://user-images.githubusercontent.com/79770615/160653743-d99a4442-1196-46eb-934c-c6f01cac9493.png)
+![Output](https://user-images.githubusercontent.com/79770615/161028479-cb10caa1-dc46-4c8f-9543-ed48136e5e13.png)
